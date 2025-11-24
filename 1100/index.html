@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Basten Gaming Host 11.00 FW</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+<!-- Pastikan Style.css (root) berada satu level di atas: ../Style.css -->
+<link rel="stylesheet" href="../Style.css">
+
+<style>
+/* Local tweaks agar layout persis dengan 6.72 */
+.grid-container {
+  width: 980px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  align-items: center;
+  justify-items: center;
+}
+
+.item { width: 320px; display:flex; justify-content:center; }
+.item a { width: 100%; display:block; text-decoration:none; }
+.item button { width: 100%; max-width: 320px; height:60px; border-radius:14px; font-size:18px; font-weight:700; cursor:pointer; }
+
+/* Header/title match 6.72 */
+.Title { font-size:22px; color:#ffd700; font-weight:bold; text-align:center; display:inline-block; margin:0 18px; }
+
+/* responsif */
+@media (max-width:1000px){
+  .grid-container { grid-template-columns: 1fr; width: 86%; }
+  .item { width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<!-- STATUS BAR -->
+<div style="display:flex; align-items:center; justify-content:space-between; padding:6px 24px;">
+  <div id="date" style="font-size:22px;color:#fff;">24/11/2025</div>
+  <div style="text-align:center;">
+    <span id="done" style="color:#1fb200; font-weight:700; margin-right:12px;">Pass = 0</span>
+    <span class="Title">Basten Gaming Host 11.00 FW</span>
+    <span id="fail" style="color:#ff0000; font-weight:700; margin-left:12px;">Fail = 0</span>
+  </div>
+  <div id="clock" style="font-size:22px;color:#fff;">00:00</div>
+</div>
+
+<!-- TITLE -->
+<div class="header2" style="text-align:left; margin:18px 48px; color:#fff; font-size:20px;">Status</div>
+
+<!-- PAYLOAD GRID (3 kolom seperti 6.72) -->
+<div class="grid-container" role="navigation" aria-label="Payload list">
+
+  <!-- Row 1 -->
+  <div class="item glow">
+    <a href="payload/app2usb.bin" download><button>app2usb</button></a>
+  </div>
+
+  <div class="item glow">
+    <a href="payload/app-dumper.bin" download><button>app-dumper</button></a>
+  </div>
+
+  <div class="item glow">
+    <a href="payload/disable-aslr.bin" download><button>disable-aslr</button></a>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="item glow">
+    <a href="payload/disable-updates.bin" download><button>Disable Updates</button></a>
+  </div>
+
+  <div class="item glow">
+    <a href="payload/enable-browser.bin" download><button>Enable Browser</button></a>
+  </div>
+
+  <div class="item glow">
+    <a href="payload/enable-updates.bin" download><button>Enable Updates</button></a>
+  </div>
+
+  <!-- Row 3 -->
+  <div class="item glow">
+    <a href="payload/exit-idu.bin" download><button>Exit IDU</button></a>
+  </div>
+
+  <div class="item glow">
+    <a href="payload/fan-threshold.bin" download><button>Fan Control</button></a>
+  </div>
+
+  <div class="item glow">
+    <a href="payload/ftp.bin" download><button>FTP Server</button></a>
+  </div>
+
+  <!-- Row 4 -->
+  <div class="item glow">
+    <a href="payload/history-blocker.bin" download><button>History Blocker</button></a>
+  </div>
+
+  <div class="item glow">
+    <a href="payload/kernel-clock.bin" download><button>Kernel Clock</button></a>
+  </div>
+
+  <div class="item glow">
+    <a href="payload/kernel-dumper.bin" download><button>Kernel Dumper</button></a>
+  </div>
+
+  <!-- Row 5 (Linux variants) -->
+  <div class="item glow">
+    <a href="payload/Linux.bin" download><button>Linux (default)</button></a>
+  </div>
+
+  <div class="item glow">
+    <a href="payload/Linux-2gb.bin" download><button>Linux 2gb</button></a>
+  </div>
+
+  <div class="item glow">
+    <a href="payload/Linux-3gb.bin" download><button>Linux 3gb</button></a>
+  </div>
+
+  <!-- Row 6 -->
+  <div class="item glow">
+    <a href="payload/Linux-4gb.bin" download><button>Linux 4gb</button></a>
+  </div>
+
+  <div class="item glow">
+    <a href="payload/module-dumper.bin" download><button>Module Dumper</button></a>
+  </div>
+
+  <div class="item glow">
+    <a href="payload/permanent-uart.bin" download><button>Permanent UART</button></a>
+  </div>
+
+  <!-- Row 7 -->
+  <div class="item glow">
+    <a href="payload/ps4-debug_v1.1.16.bin" download><button>PS4 Debug v1.1.16</button></a>
+  </div>
+
+  <div class="item glow">
+    <a href="payload/ps4-sflash0-dumper.bin" download><button>SFlash0 Dumper</button></a>
+  </div>
+
+  <div class="item glow">
+    <a href="payload/pup-decrypt.bin" download><button>PUP Decrypt</button></a>
+  </div>
+
+  <!-- Row 8 -->
+  <div class="item glow">
+    <a href="payload/restore.bin" download><button>Restore</button></a>
+  </div>
+
+  <div class="item glow">
+    <a href="payload/rif-renamer.bin" download><button>RIF Renamer</button></a>
+  </div>
+
+  <div class="item glow">
+    <a href="payload/todex.bin" download><button>Todex</button></a>
+  </div>
+
+  <!-- Row 9 -->
+  <div class="item glow">
+    <a href="payload/WebRTE.bin" download><button>WebRTE</button></a>
+  </div>
+
+  <!-- Fillers so the grid stays centered if odd number -->
+  <div class="item" aria-hidden="true"></div>
+  <div class="item" aria-hidden="true"></div>
+
+</div>
+
+<!-- FOOTER -->
+<div style="margin-top:80px; text-align:center;">
+  <div class="footer2">Customized by : <span class="hue">Basten Gaming</span></div>
+  <div style="margin-top:8px; color:#ffd700;">© 2017–2025 Basten Gaming – Custom PS4 Host</div>
+</div>
+
+</body>
+</html>
