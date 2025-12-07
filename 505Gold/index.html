@@ -215,6 +215,57 @@ header div{
     }
 </style>
 
+<style>
+/* === BASTEN GAMING FINAL BUTTON SYSTEM — ALL BUTTONS AUTO-RAPI === */
+
+.basten-btn,
+button {
+    width:250px !important;
+    height:45px !important;
+    border-radius:10px !important;
+    background:rgba(0,0,0,0.6) !important;
+    border:2px solid #ff0000 !important;
+    color:#ff0000 !important;
+    text-shadow:0 0 6px #ff0000 !important;
+    box-shadow:0 0 20px #ff0000 !important;
+    font-weight:bold !important;
+    font-size:20px !important;
+    margin:6px !important;
+}
+
+button:hover,
+.basten-btn:hover {
+    background:#330000 !important;
+    border-color:#ff3333 !important;
+    color:#ffffff !important;
+    box-shadow:0 0 35px #ff3333 !important;
+}
+
+/* Untuk tombol GOLDHEN biar tetap lebih besar */
+#all button:first-child,
+#all button:nth-child(2),
+#all button:nth-child(3),
+#hens button {
+    font-size:25px !important;
+}
+
+/* Lebar tombol spesial seperti Orbis, dll */
+button[style*="Orbis"],
+button[style*="MOD"],
+button[style*="React"],
+button[style*="FTP"],
+button[style*="PS4debug"] {
+    width:auto !important;
+}
+
+/* Konten box tetap kompatibel dengan tema */
+.content {
+    background:rgba(0,0,0,0.6) !important;
+    border:2px solid #ff0000 !important;
+    box-shadow:0 0 25px #ff0000 !important;
+}
+</style>
+
 </head>
 <script src="cal.js"></script>
 <script>
